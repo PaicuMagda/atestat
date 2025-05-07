@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="car-details.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <div class="page-container">
+      <h1>Ford Explorer Electric - Descriere</h1>
+
+      <div class="w3-content w3-display-container">
+        <img class="mySlides" src="assets/ford.jpeg" />
+        <img class="mySlides" src="assets/ford1.jpeg" />
+        <img class="mySlides" src="assets/ford3.jpg" />
+
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">
+          &#10094;
+        </button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(1)">
+          &#10095;
+        </button>
+      </div>
+
+      <p class="car-description">
+        SUV electric cu spațiu generos și performanțe impresionante.
+      </p>
+      <p class="car-price">💶 Preț: 60.000 €</p>
+      <p class="car-year">An fabricație: 2025</p>
+      <p class="car-engine">Motorizare: Electrică, 400 CP</p>
+      <p class="car-fuel">⛽ Combustibil: Electricitate</p>
+      <p class="car-transmission">Transmisie: Automată</p>
+      <p class="car-color">Culoare: Gri Metalizat</p>
+      <p class="car-mileage">Kilometraj: 0 km (Nou)</p>
+      <button class="car-btn">📞 Contactează-ne</button>
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusDivs(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function showSlides(n) {
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+
+    <script>
+      fetch("navbar.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("navbar-placeholder").innerHTML = data)
+        );
+    </script>
+
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("footer-placeholder").innerHTML = data)
+        );
+    </script>
+  </body>
+</html>
