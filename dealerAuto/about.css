@@ -7,7 +7,7 @@ body {
 
 .promo-hero {
     background: #d0d9ef;
-    padding: 120px 20px;
+    padding: 80px 20px;
     text-align: center;
     color: #222d67;
     background-attachment: fixed;
@@ -34,8 +34,9 @@ body {
     max-width: 1000px;
     margin: auto;
     text-align: center;
-    background-color: #8f9ecb;
+    background-color: #0a0a23;
     position: relative;
+    color:#d0d9ef;
 
     p{
         margin-top: 3%;
@@ -144,4 +145,8 @@ body {
     100% {
       opacity: 0;
     }
+  }
+
+  #about{
+    margin-bottom: 5%;
   }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Site-ul Meu</title>
+    <link rel="stylesheet" href="cars.css" />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <div class="page-container">
+      <div id="cars">
+        <div class="car-card">
+          <img src="assets/audi.jpg" alt="Audi A4" class="car-image" />
+          <h3 class="car-title">Audi A4</h3>
+          <p class="car-description">
+            Performanță premium și confort de top pentru orice călătorie.
+          </p>
+          <p class="car-price">Preț: 40.000 €</p>
+          <p class="car-year">An fabricație: 2020</p>
+          <button class="car-btn">Vezi detalii</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            src="assets/audi.jpg"
+            alt="Mercedes-Benz C-Class"
+            class="car-image"
+          />
+          <h3 class="car-title">Mercedes-Benz C-Class</h3>
+          <p class="car-description">
+            Eleganță și tehnologie de ultimă generație într-un singur pachet.
+          </p>
+          <p class="car-price">Preț: 45.000 €</p>
+          <p class="car-year">An fabricație: 2022</p>
+          <button class="car-btn">Vezi detalii</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            src="assets/mercedes.jpeg"
+            alt="Tesla Model S"
+            class="car-image"
+          />
+          <h3 class="car-title">Tesla Model S</h3>
+          <p class="car-description">
+            Fii parte din viitor cu un vehicul electric inovator și performant.
+          </p>
+          <p class="car-price">Preț: 80.000 €</p>
+          <p class="car-year">An fabricație: 2023</p>
+          <button class="car-btn">Vezi detalii</button>
+        </div>
+
+        <div class="car-card">
+          <img src="assets/bmw.jpeg" alt="BMW Seria 3" class="car-image" />
+          <h3 class="car-title">BMW Seria 3</h3>
+          <p class="car-description">
+            Un sedan sportiv, cu performanțe excelente și design elegant.
+          </p>
+          <p class="car-price">Preț: 35.000 €</p>
+          <p class="car-year">An fabricație: 2021</p>
+          <button class="car-btn">Vezi detalii</button>
+        </div>
+
+        <div class="car-card">
+          <img src="assets/audi.jpg" alt="Audi A4" class="car-image" />
+          <h3 class="car-title">Audi A4</h3>
+          <p class="car-description">
+            Performanță premium și confort de top pentru orice călătorie.
+          </p>
+          <p class="car-price">Preț: 40.000 €</p>
+          <p class="car-year">An fabricație: 2020</p>
+          <button class="car-btn">Vezi detalii</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            src="assets/audi.jpg"
+            alt="Mercedes-Benz C-Class"
+            class="car-image"
+          />
+          <h3 class="car-title">Mercedes-Benz C-Class</h3>
+          <p class="car-description">
+            Eleganță și tehnologie de ultimă generație într-un singur pachet.
+          </p>
+          <p class="car-price">Preț: 45.000 €</p>
+          <p class="car-year">An fabricație: 2022</p>
+          <button class="car-btn">Vezi detalii</button>
+        </div>
+
+        <div class="car-card">
+          <img
+            src="assets/mercedes.jpeg"
+            alt="Tesla Model S"
+            class="car-image"
+          />
+          <h3 class="car-title">Tesla Model S</h3>
+          <p class="car-description">
+            Fii parte din viitor cu un vehicul electric inovator și performant.
+          </p>
+          <p class="car-price">Preț: 80.000 €</p>
+          <p class="car-year">An fabricație: 2023</p>
+          <button class="car-btn">Vezi detalii</button>
+        </div>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      fetch("navbar.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("navbar-placeholder").innerHTML = data)
+        );
+    </script>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("footer-placeholder").innerHTML = data)
+        );
+    </script>
+  </body>
+</html>
