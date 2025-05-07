@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Site-ul Meu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div id="navbar-placeholder"></div>
+
+      <div id="home"></div>
+
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <script>
+      fetch("navbar.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("navbar-placeholder").innerHTML = data)
+        );
+    </script>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("footer-placeholder").innerHTML = data)
+        );
+    </script>
+    <script>
+      fetch("home.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("home").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
