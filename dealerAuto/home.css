@@ -57,6 +57,26 @@
   background-color: white;
   text-align: center;
   padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+
+  h3{
+    margin-top: 3%;
+  }
+}
+
+.car-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.car-card img {
+  width: 100%;
+  height: auto;
+}
+
+.car-card:hover img {
+  transform: scale(1.1);
 }
 
 .car-card img {

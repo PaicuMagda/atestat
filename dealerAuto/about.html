@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Site-ul Meu</title>
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div id="navbar-placeholder"></div>
+
+      <div id="about">
+        <div class="promo-hero">
+          <h1>Descoperă AutoLux</h1>
+          <p>Lux, Încredere și Performanță în Fiecare Vehicul</p>
+        </div>
+
+        <section class="history-section">
+          <h2>Istoricul AutoLux</h2>
+          <p>
+            Înființată în anul 2013, AutoLux a început ca o mică afacere de
+            familie, cu o pasiune profundă pentru mașinile premium și dorința de
+            a oferi clienților o experiență de achiziție auto unică. În primii
+            ani, ne-am concentrat pe construirea unei rețele de parteneriate cu
+            producători și distribuitori auto de top, oferind vehicule atent
+            selecționate și verificate.
+          </p>
+          <p>
+            Cu timpul, AutoLux a crescut rapid, devenind un nume de referință în
+            domeniu, recunoscut pentru transparența, profesionalismul și
+            serviciile de calitate superioară. În 2018, am lansat primul nostru
+            showroom de lux, iar în 2022, am introdus un sistem online modern,
+            care permite clienților să exploreze și să achiziționeze vehicule
+            din confortul propriilor case.
+          </p>
+          <p>
+            Astăzi, AutoLux este mai mult decât un dealer auto – este un
+            partener de încredere pentru toți cei care își doresc o experiență
+            premium, fie că este vorba de achiziție, finanțare sau servicii
+            post-vânzare. Cu o echipă dedicată și o gamă diversificată de
+            vehicule de lux, continuăm să ridicăm standardele în industria auto.
+          </p>
+          <div class="image-container">
+            <img src="assets/history.jpg" alt="Istoric AutoLux" />
+            <div class="overlay-text">😀 Hai să te cunoaștem!</div>
+          </div>
+        </section>
+
+        <section class="advantages-section">
+          <h2>De ce să alegi AutoLux?</h2>
+          <div class="advantages">
+            <div class="advantage">
+              <img src="assets/quality.jpg" alt="Calitate Premium" />
+              <h3>Calitate Premium</h3>
+              <p>Vehicule verificate și garantate.</p>
+            </div>
+            <div class="advantage">
+              <img src="assets/service.jpg" alt="Servicii Excepționale" />
+              <h3>Servicii Excepționale</h3>
+              <p>
+                Tu mereu pe primul loc. Suport 24/7, consiliere personalizată și
+                livrare rapidă.
+              </p>
+            </div>
+            <div class="advantage">
+              <img src="assets/trust.jpg" alt="Încredere și Siguranță" />
+              <h3>Încredere și Siguranță</h3>
+              <p>Transparență totală în fiecare tranzacție.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="reviews-section">
+          <h2>Ce spun clienții noștri 😊</h2>
+          <div class="reviews">
+            <blockquote>
+              "AutoLux mi-a oferit cea mai bună experiență de achiziție auto!" -
+              Alexandru I.
+            </blockquote>
+            <blockquote>
+              "Profesionalism și transparență de la început până la final." -
+              Elena P.
+            </blockquote>
+            <blockquote>
+              "Recomand cu încredere AutoLux pentru orice achiziție auto." -
+              Marius C.
+            </blockquote>
+          </div>
+        </section>
+      </div>
+
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <script>
+      fetch("navbar.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("navbar-placeholder").innerHTML = data)
+        );
+    </script>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("footer-placeholder").innerHTML = data)
+        );
+    </script>
+    <script>
+      fetch("about.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("about").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
