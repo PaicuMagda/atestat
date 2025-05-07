@@ -1,0 +1,124 @@
+body {
+  background-color: #0a0a23;
+  color: #b8b8b8;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #0a0a23;
+  text-align: center;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 36px;
+  color: #b8b8b8;
+  margin-bottom: 20px;
+}
+
+.car-description {
+  font-size: 18px;
+  color: #b8b8b8;
+  margin-bottom: 15px;
+  margin-top: 5%;
+}
+
+.car-price,
+.car-year,
+.car-engine,
+.car-fuel,
+.car-transmission,
+.car-mileage,
+.car-color {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.car-price {
+  font-weight: bold;
+  color: #4caf50;
+  animation: floatText 1.5s ease-in-out infinite alternate;
+}
+
+.car-btn {
+  display: block;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.car-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.w3-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.w3-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.w3-display-left {
+  left: 10px;
+}
+
+.w3-display-right {
+  right: 10px;
+}
+
+.contact-section {
+  margin-top: 50px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #555;
+}
+
+@keyframes floatText {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+.mySlides{
+  width: 100%;
+  box-shadow: 0 4px 20px 5px rgba(255, 255, 255, 0.6);
+  margin-top: 5%;
+}

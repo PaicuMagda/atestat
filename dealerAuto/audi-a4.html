@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="audi-a4.css" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <div class="page-container">
+      <h1>Audi A4 - Descriere</h1>
+
+      <div class="w3-content w3-display-container">
+        <img class="mySlides" src="assets/audi.jpg" />
+        <img class="mySlides" src="assets/audi2.jpg" />
+        <img class="mySlides" src="assets/audi3.jpeg" />
+
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">
+          &#10094;
+        </button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(1)">
+          &#10095;
+        </button>
+      </div>
+
+      <p class="car-description">
+        Performanță premium și confort de top pentru orice călătorie.
+      </p>
+      <p class="car-price">💶 Preț: 40.000 €</p>
+      <p class="car-year">An fabricație: 2020</p>
+      <p class="car-engine">Motor: 2.0 TDI, 150 CP</p>
+      <p class="car-fuel">⛽ Combustibil: Diesel</p>
+      <p class="car-transmission">Transmisie: Manuală, 6 trepte</p>
+      <p class="car-color">Culoare: Alb</p>
+      <p class="car-mileage">Kilometraj: 50.000 km</p>
+      <button class="car-btn">📞 Contactează-ne</button>
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusDivs(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function showSlides(n) {
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+    <script>
+      fetch("navbar.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("navbar-placeholder").innerHTML = data)
+        );
+    </script>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then(
+          (data) =>
+            (document.getElementById("footer-placeholder").innerHTML = data)
+        );
+    </script>
+  </body>
+</html>
